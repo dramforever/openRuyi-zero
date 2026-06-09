@@ -18,10 +18,7 @@ force_packages_early=(
 packages=(
   busybox kmod mdevd util-linux
   libudev-zero # Replaces Systemd's libudev
-  weston seatd mesa-gl mesa-dril
-  vulkan-loader vulkan-tools
-  kmscube
-  mesa-demos libdecor
+  qemu-system iproute2
 )
 
 # Packages to install without dependencies
@@ -30,10 +27,9 @@ force_packages=(
 
 # Packages to erase after installing
 erase_packages=(
+  systemd
 )
 
 # Packages to erase, ignoring reverse dependencies
 force_erase_packages=(
-  # Rather large files that are non-critical
-  icu4c
 )
